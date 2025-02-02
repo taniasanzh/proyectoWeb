@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E2F; /* Fondo azul oscuro, moderno y tecnológico */
+    color: #FFFFFF; /* Texto blanco para mejor contraste */
+}
+  
+header {
+    background-color: transparent;
+    color: #FFFFFF; /* Mantener el texto del header visible sobre el fondo oscuro */
+    padding: 20px;
+    text-align: center;
+}
+  
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+  
+/* Estilo del menú como en la imagen */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 800px;
+}
+  
+.menu-item {
+    background-color: #1f1f2c; /* Fondo de las cajas más oscuro que el fondo principal */
+    border: 2px solid #00C4FF; /* Borde azul claro brillante */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5); /* Sombra que resalta el diseño */
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+  
+.menu-item a {
+    color: #00C4FF; /* Texto azul claro brillante */
+    text-decoration: none;
+    font-size: 18px;
+}
+  
+.menu-item:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5); /* Mayor énfasis al hover */
+}
+  
+/* Estilo del título principal */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* Título en blanco */
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+  
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+  
+    .menu-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+  
+/*prueba fondo movimiento*/
+/* Estilo para el video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    z-index: -1; /* Coloca el video detrás del contenido */
+    pointer-events: none; /* Evita que el video interfiera con la interacción del usuario */
+}
+
+/* Respaldo en caso de que el video no cargue */
+body {
+    background-color: #1E1E2F; /* Fondo de respaldo */
+}
