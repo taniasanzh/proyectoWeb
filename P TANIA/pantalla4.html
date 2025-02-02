@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Averías</title>
+  <link rel="stylesheet" href="stylesComún.css">
+</head>
+<body>
+  <video class="video-background" autoplay muted loop>
+    <source src="fondo.mp4" type="video/mp4">
+  </video>
+
+  <header class="header">
+    <div class="header-left">
+      <h1>Gestión de Averias</h1>
+    </div>
+    <div class="menu" style="position: absolute; top: 10px; right: 10px;">
+      <button class="menu-trigger">☰</button>
+      <ul class="submenu" style="right: 0; left: auto;">
+        <li><a href="pantalla2.html">Menú inicio</a></li>
+        <li><a href="maquinas.html">Máquinas</a></li>
+        <li><a href="pantalla4.html">Averías</a></li>
+        <li><a href="partes.html">Partes de Trabajo</a></li>
+        <li><a href="seguridad.html">Seguridad</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="contenido">
+    <h2>Listado de Máquinas Averiadas</h2>
+    <table class="tabla-averias">
+      <thead>
+        <tr>
+          <th>Máquina</th>
+          <th>Avería</th>
+          <th>Tipo de Avería</th>
+          <th>Usuario</th>
+          <th>Fecha del Parte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Máquina 1</td>
+          <td>Fallo en el motor</td>
+          <td>Mecánica</td>
+          <td>Juan Pérez</td>
+          <td>15/01/2025</td>
+        </tr>
+        <tr>
+          <td>Máquina 2</td>
+          <td>Problema en el sistema eléctrico</td>
+          <td>Eléctrica</td>
+          <td>Ana Martínez</td>
+          <td>20/01/2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    const menuTrigger = document.querySelector('.menu-trigger');
+    const submenu = document.querySelector('.submenu');
+    menuTrigger.addEventListener('click', () => {
+      submenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
