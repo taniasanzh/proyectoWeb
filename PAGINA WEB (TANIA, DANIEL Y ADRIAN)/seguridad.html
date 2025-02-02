@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad - Panel</title>
+    <link rel="stylesheet" href="stylesComún.css">
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="fondo.mp4" type="video/mp4">
+    </video>
+
+    <header class="header">
+        <div class="header-left">
+            <h1>Seguridad - Panel</h1>
+            <img src="seguridad.png" alt="Descripción del ícono" width="70" height="70">
+        </div>
+        <div class="menu" style="position: absolute; top: 10px; right: 10px;">
+            <button class="menu-trigger">☰</button>
+            <ul class="submenu" style="right: 0; left: auto;">
+                <li><a href="inicio.html">Menú inicio</a></li>
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="maquinas.html">Máquinas</a></li>
+                <li><a href="averia.html">Averías</a></li>
+                <li><a href="partes.html">Partes de Trabajo</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="grid-container">
+            <!-- Sección de Seguridad con Contenido -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>Cambio de Contraseña</h3>
+                    <p>En este apartado podras cambiar la contraseña o actualizarla a una nueva.</p>
+                    <button class="review-btn" onclick="window.location.href='cambio_contraseña_remota.html'">Cambiar contraseña</button>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>Auditoría de Sistema</h3>
+                    <p>Realice una revisión del estado de los sistemas de seguridad para garantizar que todas las alertas y accesos estén configurados correctamente.</p>
+                    <button class="review-btn" onclick="auditarSistema()">Iniciar Auditoría</button>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>Alertas de Seguridad</h3>
+                    <p>Controle las alertas activas, revisando cualquier actividad sospechosa dentro del sistema de maquinaria y accesos.</p>
+                    <button class="review-btn" onclick="verAlertas()">Ver Alertas</button>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>Gestión de Permisos</h3>
+                    <p>Administre los permisos de acceso para los usuarios. Asegúrese de que cada uno tenga los derechos adecuados según su rol.</p>
+                    <button class="review-btn" onclick="gestionarPermisos()">Gestionar Permisos</button>
+                </div>
+            </div>
+
+            </main>
+
+    <script>
+        // Seleccionamos el botón y el submenú
+        const menuTrigger = document.querySelector('.menu-trigger');
+        const submenu = document.querySelector('.submenu');
+    
+        // Añadimos un evento para mostrar/ocultar el submenú al hacer clic
+        menuTrigger.addEventListener('click', () => {
+            submenu.classList.toggle('active');
+        });
+
+        // Funciones de acción de los botones (simuladas con alertas)
+        function auditarSistema() {
+            alert('Auditoría de sistema iniciada...');
+        }
+
+        function verAlertas() {
+            alert('Mostrando alertas de seguridad...');
+        }
+
+        function gestionarPermisos() {
+            alert('Gestionando permisos...');
+        }
+    </script>
+
+</body>
+</html>

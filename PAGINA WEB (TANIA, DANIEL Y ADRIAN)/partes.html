@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partes de Trabajo</title>
+  <link rel="stylesheet" href="stylesComún.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <video class="video-background" autoplay muted loop>
+    <source src="fondo.mp4" type="video/mp4">
+  </video>
+
+  <header class="header">
+    <div class="header-left">
+      <h1>Gestión de Partes de Trabajo</h1>
+      <img src="partesTrabajo.png" alt="Descripción del ícono" width="70" height="70">
+    </div>
+    <div class="menu" style="position: absolute; top: 10px; right: 10px;">
+      <button class="menu-trigger">☰</button>
+      <ul class="submenu" style="right: 0; left: auto;">
+        <li><a href="inicio.html">Menú inicio</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="maquinas.html">Máquinas</a></li>
+        <li><a href="averia.html">Averías</a></li>
+        <li><a href="seguridad.html">Seguridad</a></li>
+      </ul>
+    </div>
+  </header>
+
+    <!-- Contenedor de la cuadrícula para las tarjetas -->
+    <main class="main-content">
+      <div class="grid-container">
+        
+        <!-- Primera tarjeta de parte de trabajo -->
+        <div class="machine-card">
+          <div class="responsable-img">
+            <img src="responsable1.jpg" alt="Juan Pérez" class="responsable-img">
+          </div>
+          <div class="machine-info">
+            <p class="machine-name"><strong>Parte de trabajo en:</strong> <u>Máquina 1</u></p>
+            <p class="machine-date"><i><strong>Descripción:</strong></i> Reparación del motor</p>
+            <p class="machine-location"><u><strong>Responsable:</strong> Juan Pérez</u></p>
+            <p class="machine-date"><i><strong>Fecha:</strong></i> 15/01/2025</p>
+            <button class="review-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Segunda tarjeta de parte de trabajo -->
+        <div class="machine-card">
+          <div class="responsable-img">
+            <img src="responsable2.jpg" alt="Pepito Grillo" class="responsable-img">
+          </div>
+          <div class="machine-info">
+            <p class="machine-name"><strong>Parte de trabajo en:</strong> <u>Máquina 2</u></p>
+            <p class="machine-date"><i><strong>Descripción:</strong></i> Cambio de sistema eléctrico</p>
+            <p class="machine-location"><u><strong>Responsable:</strong> Pepito Grillo</u></p>
+            <p class="machine-date"><i><strong>Fecha:</strong></i> 16/01/2025</p>
+            <button class="review-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Tercera tarjeta de parte de trabajo -->
+        <div class="machine-card">
+          <div class="responsable-img">
+            <img src="responsable3.jpg" alt="Pedro López" class="responsable-img">
+          </div>
+          <div class="machine-info">
+            <p class="machine-name"><strong>Parte de trabajo en:</strong> <u>Máquina 3</u></p>
+            <p class="machine-date"><i><strong>Descripción:</strong></i> Sustitución de componentes hidráulicos</p>
+            <p class="machine-location"><u><strong>Responsable:</strong> Pedro López</u></p>
+            <p class="machine-date"><i><strong>Fecha:</strong></i> 30/01/2025</p>
+            <button class="review-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- Cuarta tarjeta de parte de trabajo -->
+        <div class="machine-card">
+          <div class="responsable-img">
+            <img src="responsable4.jpg" alt="Manolo Lama" class="responsable-img">
+          </div>
+          <div class="machine-info">
+            <p class="machine-name"><strong>Parte de trabajo en:</strong> <u>Máquina 4</u></p>
+            <p class="machine-date"><i><strong>Descripción:</strong></i> Reparación de bomba de agua</p>
+            <p class="machine-location"><u><strong>Responsable:</strong> Manolo Lama</u></p>
+            <p class="machine-date"><i><strong>Fecha:</strong></i> 02/02/2025</p>
+            <button class="review-btn">Ver detalles</button>
+          </div>
+        </div>
+      </div> <!-- Fin grid-container -->
+    </main> <!-- Fin main-content -->
+  </div> <!-- Fin contenido -->
+
+  <footer>
+    <p>&copy; 2025 Proyecto Web</p>
+    </footer>
+
+  <script>
+    const menuTrigger = document.querySelector('.menu-trigger');
+    const submenu = document.querySelector('.submenu');
+    menuTrigger.addEventListener('click', () => {
+      submenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

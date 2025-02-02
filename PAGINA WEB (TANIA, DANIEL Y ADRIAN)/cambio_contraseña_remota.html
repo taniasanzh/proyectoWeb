@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Contraseña</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <body>
+        <video class="video-background" autoplay muted loop>
+            <source src="fondo.mp4"video/mp4">
+          </video>
+        <div class="login-container">
+            <h1>Cambio de Contraseña</h1>
+            <form>
+                <div class="input-group">
+                <label for="new-password">Nueva Contraseña:</label>
+                <input type="password" id="new-password" required placeholder="Introduce nueva contraseña"><br></div>
+
+                <div class="input-group">
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-password" required placeholder="Confirma tu contraseña"><br></div>
+
+                <button class="review-btn" type="button" onclick="updatePassword()">Actualizar Contraseña</button>
+            </form>
+        </div>
+    </body>
+    </html>
+
+    <script>
+        // Función para actualizar la contraseña
+        function updatePassword() {
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (newPassword === confirmPassword) {
+                alert('Contraseña actualizada con éxito');
+                window.location.href = 'inicio.html';
+            } else {
+                alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+            }
+        }
+    </script>
+
+</body>
+</html>
