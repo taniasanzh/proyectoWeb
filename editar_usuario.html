@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="editar_styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Editar Usuario</h1>
+    </header>
+    <div class="edit-container">
+        <div id="user-info">
+            <!-- Información del usuario cargada dinámicamente -->
+        </div>
+    </div>
+
+    <script>
+        // Base de datos simulada de usuarios
+        const userDatabase = {
+            "usuario1": { username: "usuario1", password: "clave123", attempts: 3 },
+            "usuario2": { username: "usuario2", password: "clave456", attempts: 2 },
+            "usuario3": { username: "usuario3", password: "clave789", attempts: 1 },
+            "usuario4": { username: "usuario4", password: "clave321", attempts: 4 },
+            "usuario5": { username: "usuario5", password: "clave654", attempts: 3 },
+            "usuario6": { username: "usuario6", password: "clave987", attempts: 2 },
+            "mecanico1": { username: "mecanico1", password: "mecanico456", attempts: 1 },
+            "mecanico2": { username: "mecanico2", password: "mecanico123", attempts: 2 },
+            "mecanico3": { username: "mecanico3", password: "mecanico321", attempts: 4 },
+            "mecanico4": { username: "mecanico4", password: "mecanico654", attempts: 1 },
+            "admin": { username: "admin", password: "admin789", attempts: 5 },
+            "admin2": { username: "admin2", password: "admin123", attempts: 3 },
+            "admin3": { username: "admin3", password: "admin456", attempts: 2 }
+        };
+
+        // Obtener parámetro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('user');
+
+        // Contenedor donde se mostrará la información del usuario
+        const userInfoContainer = document.getElementById('user-info');
+
+        // Comprobar si el usuario existe en la base de datos
+        if (userDatabase[username]) {
+            const user = userDatabase[username];
+            userInfoContainer.innerHTML = `
+                <h2>Información del Usuario: ${user.username}</h2>
+                <p><strong>Nombre de Usuario:</strong> ${user.username}</p>
+                <p><strong>Contraseña:</strong> ${user.password} <a href="cambio_contraseña_remota.html?user=${user.username}">(Modificar contraseña)</a></p>
+                <p><strong>Intentos de Inicio de Sesión:</strong> ${user.attempts}</p>
+                <a class="back-button" href="index.html">Volver a la página principal</a>
+            `;
+        } else {
+            userInfoContainer.innerHTML = `
+                <h2>Usuario no encontrado</h2>
+                <p>El usuario "${username}" no existe en la base de datos.</p>
+                <a class="back-button" href="index.html">Volver a la página principal</a>
+            `;
+        }
+    </script>
+</body>
+</html>

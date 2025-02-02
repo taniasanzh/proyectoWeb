@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Inicios de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function filterUsers() {
+            const searchInput = document.getElementById('search-user').value.toLowerCase();
+            const rows = document.querySelectorAll('.login-table tbody tr');
+
+            rows.forEach(row => {
+                const username = row.querySelector('td:first-child').textContent.toLowerCase();
+                row.style.display = username.includes(searchInput) ? '' : 'none';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButtons = document.querySelectorAll('.toggle-password');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const passwordSpan = button.previousElementSibling;
+                    const originalPassword = passwordSpan.dataset.password;
+
+                    if (button.textContent === 'Ocultar') {
+                        passwordSpan.textContent = '********';
+                        button.textContent = 'Mostrar';
+                    } else {
+                        passwordSpan.textContent = originalPassword;
+                        button.textContent = 'Ocultar';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Visualización de Inicios de Sesión</h1>
+    </header>
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>Buscar Usuarios</h2>
+            <input type="text" id="search-user" placeholder="Buscar por nombre de usuario" oninput="filterUsers()">
+        </aside>
+        <div class="table-container">
+            <table class="login-table">
+                <thead>
+                    <tr>
+                        <th>Nombre de Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Intentos de Inicio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Usuarios -->
+                    <tr>
+                        <td><a href="editar_usuario.html?user=usuario1">Usuario1</a></td>
+                        <td>
+                            <span class="password" data-password="clave123">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=usuario2">Usuario2</a></td>
+                        <td>
+                            <span class="password" data-password="clave456">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=usuario3">Usuario3</a></td>
+                        <td>
+                            <span class="password" data-password="clave789">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=usuario4">Usuario4</a></td>
+                        <td>
+                            <span class="password" data-password="clave321">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=usuario5">Usuario5</a></td>
+                        <td>
+                            <span class="password" data-password="clave654">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=usuario6">Usuario6</a></td>
+                        <td>
+                            <span class="password" data-password="clave987">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+
+                    <!-- Mecánicos -->
+                    <tr>
+                        <td><a href="editar_usuario.html?user=mecanico1">Mecanico1</a></td>
+                        <td>
+                            <span class="password" data-password="mecanico456">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=mecanico2">Mecanico2</a></td>
+                        <td>
+                            <span class="password" data-password="mecanico123">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=mecanico3">Mecanico3</a></td>
+                        <td>
+                            <span class="password" data-password="mecanico321">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=mecanico4">Mecanico4</a></td>
+                        <td>
+                            <span class="password" data-password="mecanico654">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+
+                    <!-- Administradores -->
+                    <tr>
+                        <td><a href="editar_usuario.html?user=admin">Admin1</a></td>
+                        <td>
+                            <span class="password" data-password="admin789">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=admin2">Admin2</a></td>
+                        <td>
+                            <span class="password" data-password="admin123">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><a href="editar_usuario.html?user=admin3">Admin3</a></td>
+                        <td>
+                            <span class="password" data-password="admin456">********</span>
+                            <button class="toggle-password">Mostrar</button>
+                        </td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

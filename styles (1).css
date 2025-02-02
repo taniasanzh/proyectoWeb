@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header {
+    background-color: #00796b;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 25%;
+    max-width: 300px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b2ebf2;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border 0.3s;
+}
+
+.sidebar input:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 6px rgba(0, 121, 107, 0.5);
+}
+
+.table-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.login-table thead {
+    background-color: #00796b;
+    color: #ffffff;
+}
+
+.login-table th, .login-table td {
+    padding: 12px;
+    border: 1px solid #b2ebf2;
+}
+
+.login-table tr:nth-child(even) {
+    background-color: #e0f7fa;
+}
+
+.login-table tr:hover {
+    background-color: #b2ebf2;
+}
+
+.login-table th {
+    font-weight: bold;
+}
+
+.login-table td {
+    color: #004d40;
+}
